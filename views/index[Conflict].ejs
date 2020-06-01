@@ -1,0 +1,86 @@
+<!doctype html>
+ <html>
+<head>
+    <title>Cookbook</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+
+    <style>
+    .index-cover {
+      background-image:none;
+      background-size:cover;
+    }
+    .sidenav {
+      border-right-style:solid;
+      border-color: grey;
+    }
+    
+    </style>
+
+
+</head>
+
+<body class = "index-cover">
+
+
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 id = "name" name = "username"><%= data.name %></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <br>
+      <a href = "search.html">Search</a>
+      <br>
+      <a href = "add_new.html">Add</a>
+      <br>
+      <a href = "login.html">Logout</a>
+    </div>
+
+
+
+      <div class = "recipes_grid">
+        
+      
+              <% for (var i = 0; i < data.recipes.length; i++) {%>
+              <div class = "recipe-panel">
+                <!-- Output name from the iterated quote object -->
+                
+                  <div class="recipes_image" style = "background-image : url('<%=data.recipes[i].image %>');">
+                  &nbsp &nbsp &nbsp
+                  <div class="recipes_title">
+                      <%=data.recipes[i].title %>
+                      <div class="grid__overlay">
+                        <button class="viewbutton">view more</button>
+                      </div>
+                  
+                  </div>
+                  &nbsp &nbsp &nbsp
+                  <!-- <div class="recipes_ingr"><%=data.recipes[i].ingr %>
+                  &nbsp &nbsp &nbsp -->
+                  
+                </div>
+                
+            </div>
+          <% } %>
+        
+        
+      </div>
+      <div class="over">
+       <div class="over__inner">
+         <button class="close">close X</button>
+         <div class = "over_img">
+           <h3 class = "overlay-title"></h3>
+           <img>
+           <p></p>
+         </div>
+       </div>
+     </div>
+
+  
+
+</body>
+</html>

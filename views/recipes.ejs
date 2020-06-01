@@ -1,0 +1,91 @@
+<!doctype html>
+ <html>
+<head>
+    <title><%=data.recipes.title %></title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+
+    <style>
+    .index-cover {
+      background-image:none;
+      background-size:cover;
+    }
+    .sidenav {
+      border-right-style:solid;
+      border-color: grey;
+    }
+    
+    .index_title {
+      margin-left:10px;
+      margin-bottom:10px;
+    }
+    
+    .recipes_image {
+      width:600px;
+      height:400px;
+      margin-left:10px;
+    }
+    </style>
+
+
+</head>
+
+<body class = "index-cover">
+
+
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 id = "name" name = "username"><%= data.name %></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <br>
+      <a href = "search.html">Search</a>
+      <br>
+      <a href = "add_new.html">Add</a>
+      <br>
+      <a href = "login.html">Logout</a>
+    </div>
+
+      <div class = "Recipe_Detail_html">
+
+        <h2 class = "index_title"><%=data.recipes.title %></h2>
+        <div class = "recipe_time">
+          Cooking Time: <%=data.recipes.time %>
+        </div>
+        <br>
+        <aside class = "recipe_ingr">
+          <h2 class = "details">Ingredients</h2>
+          <%=data.recipes.ingr %>
+          <br>
+          <h2 class = "details">Instructions</h2>
+          <%=data.recipes.instr %>
+        </aside>
+
+        <div class="recipes_image" style = "background-image : url('<%=data.recipes.image %>');"></div>
+        &nbsp &nbsp &nbsp
+        <a href = "edit.html?title=<%=data.recipes.title %>"><h3 class = "edit">Edit Recipe</h3></a>
+      
+        
+      
+        
+        
+        
+        
+        
+      
+  
+        
+              
+                
+                
+        </div>
+          
+
+  
+
+</body>
+</html>

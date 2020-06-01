@@ -1,0 +1,85 @@
+<!doctype html>
+ <html>
+<head>
+    <title>Cookbook</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+    
+
+      <script>
+        function validateForm() {
+          var y = document.add_recipe.username.value;
+          var z = document.add_recipe.password.value;
+          if (y == "") {
+            alert("Please enter a username");
+            document.add_recipe.password.focus() ;
+            return false;
+          }
+          if (z == "") {
+            alert("Please enter a password");
+            document.add_recipe.email.focus() ;
+            return false;
+          }
+          return true;
+        }
+      </script>
+    
+
+
+</head>
+
+<body class = "index-cover">
+
+
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 id = "name" name = "name"></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <br>
+      <a href = "/">Search</a>
+      <br>
+      <a href = "add_new.html?name=<%= data.name.username %>"><div class = "add_new" id = "add_new">Add</div></a>
+      <br>
+      <a href = "login.html">Logout</a>
+    </div>
+
+
+
+      <div class = "new_recipe">
+        <h2>Add New Recipe</h2>
+        <form method = "POST" action = "/create_new_recipe"  name="add_recipe" onsubmit = "return validateForm();">
+          <input class="un " type="text" align="center"  name = "title" placeholder="Title" >
+          <br>
+          <br>
+          <input class="un" type="text" align="center"  name = "ingr" placeholder="Ingredients" >
+          <br>
+          <br>
+          <input class="un " type="text" align="center"  name = "instr" placeholder="Instructions" >
+          <br>
+          <br>
+          <input class="un" type="text" name = "time" placeholder="Time" >
+          <br>
+          <br>
+          <input type="submit" class = "submit" align="center" value = "Submit">
+        </form>
+          
+      </div>
+
+  
+
+</body>
+
+<script>
+  const url = new URL(window.location.href);
+  const params = url.searchParams;
+  var name = params.get('name');
+  console.log(name);
+  document.getElementById("name").innerHTML = name;
+</script>
+
+</html>

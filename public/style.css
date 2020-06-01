@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo");
+.login_body{
+    background-image: url("https://images.unsplash.com/photo-1490731727228-d56f39758d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"); 
+    background-size: cover; 
+}
+
+h2{
+    
+    font-family:'Courier New','monospace'; 
+    font-size: 10px; 
+}
+
+
+h2 {
+  font-size: 35px;
+}
+
+/* h1 {
+  font-size: 50px;
+} */
+
+.main {
+      
+        font-family:"Cardo";
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 350px;
+        margin: 7em auto;
+        margin-top:180px;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+
+.sign {
+    padding-top: 40px;
+    color: #AEC6CF;
+    font-family:"Cardo";
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+    width: 76%;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family:"Cardo";
+}
+
+form.form1 {
+    padding-top: 60px;
+}
+
+.pass {
+        width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'system-ui', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: #4A708B;
+    opacity:0.9;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'system-ui', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.submit:hover {
+  opacity:0.5;
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #87Ceff;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #black;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+}
+

@@ -1,0 +1,44 @@
+<!doctype html>
+ <html>
+<head>
+    <title>Cookbook</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    
+
+
+</head>
+
+<body class = "index-cover">
+
+ 
+
+    
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 name = "username"><%= data.name.username %></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <a href = "add_new.html?name=<%= data.name.Username %>">Add New Recipe</a>
+    </div>
+
+
+
+      <div class = "recipes_grid">
+        
+      </div>
+
+  
+
+</body>
+</html>

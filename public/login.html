@@ -1,0 +1,64 @@
+<html>
+<title> Login Page </title>
+<meta name="author" content="Andrea Foo">
+<meta charset="utf-8"/>
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/style.css" media="screen">
+
+
+
+
+  <script>
+    function validateForm() {
+      var y = document.login.username.value;
+      var z = document.login.password.value;
+      if (y == "") {
+        alert("Please enter a username");
+        document.login.password.focus() ;
+        return false;
+      }
+      if (z == "") {
+        alert("Please enter a password");
+        document.login.email.focus() ;
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <style>
+  
+  </style>
+
+</head>
+
+    <div class="header-fixed">
+        <div class="header">
+          
+        </div>
+    </div>
+
+
+
+<body class = "login_body">
+  <div class="main">
+    <p class="sign" align="center">SIGN IN</p>
+    <form method = "POST" action = "/submit-login"  name="login" onsubmit = "return validateForm();">
+      <input class="un " type="text" name = "username" align="center" placeholder="Username" >
+      <input class="pass" type="password" name = "password" align="center" placeholder="Password" >
+      <input type="submit" class = "submit" align="center" value = "Sign in">
+    </form>
+      <p class="forgot" align="center">Haven't created an account? <a href="signup.html"><u>Register </u></a></p>
+
+
+  </div>
+
+</body>
+
+
+
+</html>

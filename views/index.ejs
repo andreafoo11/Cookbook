@@ -1,0 +1,70 @@
+<!doctype html>
+ <html>
+<head>
+    <title>Cookbook</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+
+    <style>
+    .index-cover {
+      background-image:none;
+      background-size:cover;
+    }
+    .sidenav {
+      border-right-style:solid;
+      border-color: grey;
+    }
+    
+    </style>
+
+
+</head>
+
+<body class = "index-cover">
+
+
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 id = "name" name = "username"><%= data.name %></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <br>
+      <a href = "search.html">Search</a>
+      <br>
+      <a href = "add_new.html">Add</a>
+      <br>
+      <a href = "login.html">Logout</a>
+    </div>
+
+    <h2 class = "index_title">Your Recipes</h2>
+    <br><br>
+
+      <div class = "recipes_grid">
+        
+        <% for (var i = 0; i < data.recipes.length; i++) {%>
+        <div class = "recipe-panel"><a class = "recipe_details_page" href = "recipes.html?title=<%=data.recipes[i].title %>">
+          <!-- Output name from the iterated quote object -->
+          
+            <div class="recipes_image" style = "background-image : url('<%=data.recipes[i].image %>');">
+            &nbsp &nbsp &nbsp
+            <div class="recipes_title"><%=data.recipes[i].title %></div>
+            &nbsp &nbsp &nbsp
+            <!-- <div class="recipes_ingr"><%=data.recipes[i].ingr %>
+            &nbsp &nbsp &nbsp -->
+            
+          </div>
+        </a>
+      </div>
+    <% } %>
+        
+      </div>
+  
+
+  
+
+</body>
+</html>

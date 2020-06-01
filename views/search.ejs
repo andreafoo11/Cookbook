@@ -1,0 +1,119 @@
+<!doctype html>
+ <html>
+<head>
+    <title>Search</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+
+  <style>
+    .sidenav {
+      border-right-style:solid;
+      border-color: grey;
+    }
+    .index-cover {
+      background-image: none;
+      margin-left:200px;
+    }
+    .input {
+        font-family: Copperplate;
+        font-weight: bold;
+        color: white; 
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #submit {
+        background: #4A708B;
+        font-family: 'Playfair Display', serif;
+        padding: .5em;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        border: none;
+        width: 110px;
+        margin-left: 38%;
+        margin-top: 15px;
+    }
+
+
+    #submit:hover {
+        border: none;
+        opacity:0.5;
+    }
+
+    input[type=text] {
+        width: 600px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        background-color: white;
+        /* background-image: url('searchicon.png'); */
+        background-size: 25px;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 20px;
+        transition: width 0.4s ease-in-out;
+        text-align: center;
+    }
+    
+    
+
+/* input[type=text]:focus {
+    width: 80%;
+} */
+
+
+</style>
+</head>
+
+<body class = "index-cover">
+
+
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 id = "name" name = "username"><%= data.name %></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <br>
+      <a href = "search.html">Search</a>
+      <br>
+      <a href = "add_new.html">Add</a>
+      <br>
+      <a href = "login.html">Logout</a>
+    </div>
+
+
+
+    <form class = "formInput" name="formInput" action = '/search' method = "POST" >
+       <h2 class = "search_title">Search For Other Recipes </h2>
+        
+        <div style="line-height:20%;">
+            <br>
+        </div>
+
+        <!--
+        <input style="width:150px; height:20px; margin-top: 6px;" type="text" name="city" id="inputBox" placeholder="Your city...">
+        -->
+        <input type="text" name="recipe_to_search" id="inputBox" placeholder="Enter Recipe Title to Search">
+
+        <div style="line-height:20%;">
+        <br>
+        </div>
+        <input type="submit" value="Search" id="submit">
+
+
+    </form>
+    
+
+  
+
+</body>
+</html>

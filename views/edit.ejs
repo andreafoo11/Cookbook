@@ -1,0 +1,82 @@
+<!doctype html>
+ <html>
+<head>
+    <title>Update Recipe</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--- External Stylesheet --->
+    <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
+
+    <style>
+    
+  
+    .index_title {
+      margin-left:10px;
+      margin-bottom:10px;
+    }
+    
+    .recipes_image {
+      width:600px;
+      height:400px;
+      margin-left:10px;
+    }
+    
+    .new_recipe {
+      width:800px;
+      margin-left:30%;
+    }
+    </style>
+
+
+</head>
+
+<body class = "index-cover">
+
+
+    <div class = "sidenav">
+      
+      <div class = "welcome">
+          <h2>Welcome</h2>
+          <h2 id = "name" name = "username"><%= data.name %></h2>
+      </div>
+      <a href = "index.html">Home</a>
+      <br>
+      <a href = "search.html">Search</a>
+      <br>
+      <a href = "add_new.html">Add</a>
+      <br>
+      <a href = "login.html">Logout</a>
+    </div>
+
+    <div class = "new_recipe">
+      <h2 class = "index_title">Edit Recipe</h2>
+
+        <form method = "POST" action = "/update_recipe"  name="add_recipe" onsubmit = "return validateForm();">
+          <input id = "form_name" name = "username" value = "<%= data.name %>">
+          <br>
+        <span>
+          <input class="un_e" type="text" align="center"  name = "title" value = "<%=data.recipes.title %>" placeholder="Title" >
+          <input class="un_e" type="text" name = "time" placeholder="Time"value = "<%=data.recipes.time %>" >
+        </span>
+          
+          <input class="un_e" type="text" align="center"  name = "image"  placeholder="Enter Image URL" value = "<%=data.recipes.image %>">
+          <br>
+          <br>
+          <textarea class="un" type="text" align="center"  name = "ingr" placeholder="Ingredients"><%=data.recipes.ingr %></textarea>
+          <br>
+          <br>
+          <textarea class="un " type="text" align="center"  name = "instr" placeholder="Instructions"><%=data.recipes.instr %></textarea>
+          
+          <br>
+          <br>
+          <input type="submit" class = "submit" align="center" value = "Update Recipe">
+        </form>
+
+                
+        </div>
+          
+
+  
+
+</body>
+</html>

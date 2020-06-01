@@ -1,0 +1,67 @@
+<html>
+<title> Signup Page </title>
+<meta name="author" content="Andrea Foo">
+<meta charset="utf-8"/>
+
+<head>
+  <!--- External Stylesheet --->
+  <link rel="stylesheet" type="text/css" href="./public/style.css" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up</title>
+  
+  <style>
+  body{
+      background-image: url("https://images.unsplash.com/photo-1490731727228-d56f39758d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"); 
+      background-size: cover; 
+  }
+
+  </style>
+
+  <script>
+    function validateForm() {
+      var y = document.login.username.value;
+      var z = document.login.password.value;
+
+      if (y == "") {
+        alert("Please enter a username");
+        document.login.password.focus() ;
+        return false;
+      }
+      if (z == "") {
+        alert("Please enter a password");
+        document.login.email.focus() ;
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</head>
+
+
+<div class="header-fixed">
+    <div class="header">
+    </div>
+</div>
+
+
+<body class = "login_body">
+  <div class="main">
+    <p class="sign" align="center">SIGN UP</p>
+    <form name="login" action = "/submit-signup" method = "POST" onsubmit = "return validateForm();">
+      <input class="un " type="text" name = "username" align="center" placeholder="Username" >
+      <input class="pass" type="text" name = "password" align="center" placeholder="Password" >
+      <input type="submit" class = "submit" align="center" href = "index.html" value = "Sign Up">
+    </form>
+    
+    <p class="forgot" align="center"><a href = "login.html">Go back to <u>Login</a></u></p>
+
+
+  </div>
+
+</body>
+
+
+
+</html>

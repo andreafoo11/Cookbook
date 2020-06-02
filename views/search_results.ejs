@@ -1,7 +1,7 @@
 <!doctype html>
  <html>
 <head>
-    <title><%=data.recipes[i].title %></title>
+    <title><%=data.recipes[0].title %></title>
     <meta charset="utf-8"/>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <!--- External Stylesheet --->
@@ -13,7 +13,7 @@
       border-color: grey;
     }
     .index-cover {
-      background-image: none;
+      background-color:#F1e0b0;
       margin-left:200px;
     }
     .input {
@@ -25,8 +25,8 @@
     }
 
     #submit {
-        background: #4A708B;
-        font-family: 'Playfair Display', serif;
+        background: #799ecc;
+        font-family: 'Cardo';
         padding: .5em;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -67,6 +67,11 @@
       margin-left:80px;
     }
     
+    .search_title {
+      font-size:35px;
+      margin-left:17%;
+        
+    }
     
 
 /* input[type=text]:focus {
@@ -126,7 +131,6 @@
             <div class="recipes_image" style = "background-image : url('<%=data.recipes[i].image %>');">
             &nbsp &nbsp &nbsp
             <div class="recipes_title"><%=data.recipes[i].title %>
-            &nbsp &nbsp &nbsp
             <div class="recipes_details">By User: <%=data.recipes[i].username %></div>
             &nbsp &nbsp &nbsp
             </div>

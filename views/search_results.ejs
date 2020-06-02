@@ -8,10 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./public/index_style.css" media="screen">
 
   <style>
-    .sidenav {
-      border-right-style:solid;
-      border-color: grey;
-    }
+  
     .index-cover {
       background-color:#F1e0b0;
       margin-left:200px;
@@ -63,16 +60,21 @@
     }
     
     .recipes_grid {
-      margin-top:50px;
+      margin-top:30px;
       margin-left:80px;
     }
     
     .search_title {
       font-size:35px;
       margin-left:17%;
-        
     }
     
+    .search_result_title{
+      margin-left:9%;
+      font-family: 'Cardo';
+      color:#799ecc;
+      margin-top:40px;
+    }
 
 /* input[type=text]:focus {
     width: 80%;
@@ -118,10 +120,12 @@
         <br>
         </div>
         <input type="submit" value="Search" id="submit">
-
+      
+      
 
     </form>
     
+    <h2 class = "search_result_title">Search Results for: <%=data.recipes[0].title %>...</h2>
     <div class = "recipes_grid">
       <% for (var i = 0; i < data.recipes.length; i++) {%>
 

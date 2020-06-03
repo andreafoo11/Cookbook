@@ -52,7 +52,8 @@ div {
 
 .recipes_grid {
   width:90%;
-  /* margin-top:10px; */
+  margin-top:0;
+  padding-top:0;
   font-size:50px;
   float:center;
   margin-left:18%;
@@ -220,7 +221,6 @@ form.form1 {
   background-size:cover;
   padding-bottom:0px;
   margin-bottom:0px;
-  opacity:0.8;
 }
 
 .recipe-panel {
@@ -288,7 +288,6 @@ form.form1 {
   font-weight:200;
   color: #799ecc;
   text-transform: uppercase;
-  margin-top:0;
   /* border-style:solid;
   padding:7px; */
   /* border-color:#b3cbd4; */
@@ -335,32 +334,12 @@ aside {
   padding:7px;
   border-width:medium;
   width:130px;
-  /* margin-left:10px; */
+  margin-left:10px;
   text-align:center;
   text-transform: uppercase;
 }
 
 .edit:hover {
-  background-color:#799ecc;
-  color:white;
-}
-
-.delete {
-  font-family:'Playfair Display';
-  color:#799ecc;
-  border-color:#b3cbd4;
-  border-style:solid;
-  padding:7px;
-  border-width:medium;
-  width:200px;
-  margin-left:10px;
-  text-align:center;
-  text-transform: uppercase;
-  margin-left:10px;
-  float:right;
-}
-
-.delete:hover {
   background-color:#799ecc;
   color:white;
 }
@@ -371,8 +350,4 @@ a{
 
 #form_name {
   display:none;
-}
-
-.edit_and_delete {
-  display:inline-flex;
 }
